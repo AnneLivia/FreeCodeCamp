@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Lora');
+
+.container {
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.6);
+    margin-top: 80px;
+    font-family: 'Alegreya', serif;
+}
+
+.banner {
+    margin: 20px;
+    padding: 40px;    
+}
+
+.banner h1 {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 80px;
+    font-family: 'Lora', serif;
+}
+
+.banner h2 {
+    color: blueviolet;
+    font-family: 'Lora', serif;
+}
+.mainInformation {
+    margin: 25px 30px 0px 10px;
+    box-shadow: 1px 3px 4px rgba(0,0,0,0.6);
+    padding: 20px;
+}
+.mainPicture {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.figure-caption {
+    padding: 6px;
+    color: black;
+    font-size: 15px;
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.mainPicture:hover .figure-caption{
+    opacity: 1;
+}
+
+.article {
+    margin-top: 40px;
+}
+
+.article h3 {
+    margin-top: 20px;
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+}
+li {
+    font-size: 16px;
+    margin: 0px 50px 0px 10px;
+    padding: 2px;
+}
+
+.lastInformation {
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+}
