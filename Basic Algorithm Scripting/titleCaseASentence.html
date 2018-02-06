@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function titleCase(str) {
+            var strArr = str.split(' ');
+            for(var i = 0; i < strArr.length; i++)
+            {
+                strArr[i] = strArr[i].toLowerCase();
+                strArr[i] = strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1);
+            }
+            str = strArr.join(' ');
+            return str;
+        }
+    
+        alert(titleCase("I'm a little tea pot"));
+    </script>
+</body>
+</html>

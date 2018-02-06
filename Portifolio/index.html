@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="_css/bootstrap.min.css" />
+    <!-- posso colocar o do site -->
+    <link rel="stylesheet" href="_css/animate.min.css" />
+    <!-- posso colocar o do site -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Este é o jQuery -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Tudo isso é para o jquery UI-->
+    <link rel="stylesheet" href="_css/style.css" />
+    <!-- Abaixo: Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Anne Livia - Portfolio </title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="interface">
+            <div class="pIntroduction">
+                <div class="goto">
+                    <!-- Abaixo está a seta que fica pulando no meio da tela do computador -->
+                    <!--<a href="#menu"><img class="animated infinite bounce arrow mx-auto d-block img-fluid" src="_image/seta.jpg"/></a>-->
+                    <a href="#idAbout">
+                        <span class="animated infinite bounce arrow mx-auto d-block img-fluid"></span>
+                    </a>
+                </div>
+            </div>
+            <!-- </div> Essa div estava aqui para fechar o interface-->
+            <div class="menu" id="menu">
+                <ul class="nav justify-content-center nav-tabs" id="idNav">
+                    <li class="nav-item">
+                        <a href="#idAbout" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#idPortfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#idContact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="pAbout" id="idAbout">
+                <div class="pText">
+                    <div class="aBorder">
+                        <h1 class="text-center anime5"> About Me </h1>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!--  Minha imagem utilizando só um imagem com varias classes dentre elas o rounded-circle que deixa a imagem em formato de circulo -->
+                                <img class="anime3 rounded-circle perfil mx-auto d-block" src="https://avatars3.githubusercontent.com/u/31932673?s=460&v=4"/>
+                                
+                                <!-- Minha foto do perfil utilizando uma lista e um background-image na parte do css
+                                <ul class="">
+                                    <li id="perfil"></li>
+                                </ul> -->
+                            </div>
+                            <div class="col-md-8">
+                                <p class="text-justify anime4">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nam optio fuga inventore esse? Ducimus est repudiandae,
+                                    facere rem odio, deserunt ex, necessitatibus maiores a nemo deleniti? Et ipsa placeat
+                                    voluptatem quasi. Eum at animi reprehenderit quidem nostrum voluptatibus. Nam harum esse
+                                    fugiat magnam quis dolore repudiandae maiores in sapiente? Tenetur, quidem, dignissimos
+                                    vitae velit voluptatum eveniet ab iste id laborum eius natus fugiat consequatur esse
+                                    a. Quod, laborum. Officiis molestiae ea atque ut corporis vero quis quod blanditiis pariatur
+                                    explicabo commodi amet, perspiciatis sit incidunt? Saepe eum quos, reiciendis est distinctio
+                                    impedit facilis? Accusantium et autem deserunt impedit magnam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pPart1">
+                <!-- One image here -->
+            </div>
+            <div class="pPortfolio" id="idPortfolio">
+                <div class="pText">
+                    <div class="aBorder">
+                        <h1 class="text-center anime5"> Portfolio </h1>
+                        <div class="row pVideo anime1">
+                            <div class="col-md-12">
+                                <video width="720px" height="650px" loop autoplay>
+                                    <source src="_videos/parallaxWebSite.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="row pImages">
+                            <!-- First image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">    
+                                <a href="https://github.com/AnneLivia/parallaxWebSite" target="_blank"><img src="_image/portImage1.png" class="img-thumbnails portImages" id="pImage1"/></a>
+                            </div>
+                            <!-- Second image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">
+                                <img src="_image/portImage2.png" class="img-thumbnails portImages" id="pImage2" />
+                            </div>
+                            <!-- Third image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">
+                                <img src="_image/portImage3.png" class="img-thumbnails portImages" id="pImage3" />
+                            </div>
+                            <!-- Fourth image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">
+                                <a href="https://github.com/AnneLivia/FreeCodeCamp/tree/master/TributePage" target="_blank"><img src="_image/portImage4.png" class="img-thumbnails portImages" id="pImage4" /></a>
+                            </div>
+                            <!-- Fifth image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">
+                                <img src="_image/portImage5.png" class="img-thumbnails portImages" id="pImage5" />
+                            </div>
+                            <!-- Sixth image of one of my projects -->
+                            <div class="col-md-4 circleGrow anime2">
+                                <img src="_image/portImage6.png" class="img-thumbnails portImages" id="pImage6" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pPart2">
+                <!-- Another image here -->
+            </div>
+            <div class="pContact" id="idContact">
+                <div class="pText">
+                    <div class="aBorder">
+                        <h1 class="text-center anime5"> Contact </h1>
+                        <div class="row anime6">
+                            <div class="col-md-4">
+                                <form action="mailto:annelivia16@gmail.com" method="post" id="idContactForm" type="text/plain" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name" size="30" id="idName" name="name" required/>
+                                        <br/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email Address" size="30" id="idEmail" name="email" required/>
+                                        <br/>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" placeholder="Phone Number" size="30" id="idTel" name="telephone" required/>
+                                        <br/>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea placeholder="Let your Mensage" id="idMensage" rows="4" name="mensage" required>
+                                        </textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btSend"><i class="fa fa-paper-plane-o" aria-hidden="true">  Send</i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="text-justify anime4">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia nam optio fuga inventore esse? Ducimus est repudiandae,
+                                    facere rem odio, deserunt ex, necessitatibus maiores a nemo deleniti? Et ipsa placeat
+                                    voluptatem quasi. Eum at animi reprehenderit quidem nostrum voluptatibus. Nam harum esse
+                                    fugiat magnam quis dolore repudiandae maiores in sapiente? Tenetur, quidem, dignissimos
+                                    vitae velit voluptatum eveniet ab iste id laborum eius natus fugiat consequatur esse
+                                    a. Quod, laborum. Officiis molestiae ea atque ut corporis vero quis quod blanditiis pariatur
+                                    explicabo commodi amet, perspiciatis sit incidunt? Saepe eum quos, reiciendis est distinctio
+                                    impedit facilis? Accusantium et autem deserunt impedit magnam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pPart3">
+                <!-- Another image here -->
+            </div>
+            <!-- Depois vejo se deixo ou não, essa é a parte das midias sociais -->
+            <div class="pEnd">
+                <div class="pText">
+                    <div class="aBorder">
+                        <h1 class="text-center anime5"> Social Midias </h1>
+                        <div class="midias">
+                            <div class="row anime6">
+                                <div class="col-sm-3 grow">
+                                    <a href="https://www.instagram.com/anneliviia/" class="linkInstagram" target="_blank">
+                                        <!-- Link to this image on the internet: 
+                                        data:image/png;base64,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
+                                        -->
+                                        <img class="iconInstagram icon" src="_image/instagramIcon.png" />
+                                        <br/> @anneliviia
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 grow">
+                                    <a href="https://www.facebook.com/annelivia" class="linkFacebook" target="_blank">
+                                        <!-- Link to this image on the internet:   
+                                        https://icon-icons.com/icons2/38/PNG/512/facebook_social_4561.png -->
+                                        <img class="iconFacebook icon" src="_image/facebookIcon.png" />
+                                        <br/> @annelivia
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 grow">
+                                    <a href="https://www.linkedin.com/in/annelivia" class="linkLinkedin" target="_blank">
+                                        <!-- Link to this image on the internet:  
+                                        http://icons.iconarchive.com/icons/icons8/ios7/512/Logos-Linkedin-icon.png 
+                                         -->
+                                        <img class="iconLinkedin icon" src="_image/linkedinIcon.png" />
+                                        <br/> @annelivia
+                                    </a>
+                                </div>
+                                <div class="col-sm-3 grow">
+                                    <a href="https://github.com/annelivia" class="linkGithub" target="_blank">
+                                        <!-- Link to this image on the internet:   
+                                        https://icon-icons.com/icons2/818/PNG/512/Social-26-Github-Outline_icon-icons.com_66350.png
+                                         -->
+                                        <img class="iconGithub icon" src="_image/githubIcon.png" />
+                                        <br/> @annelivia
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <footer>
+                            <p class="text-center"> Programmed and Written by Anne Livia da F. Macedo </p>
+                            <p class="text-center"> Anne Livia © 2018. All Rights Reversed </p>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="_javascript/main.js"></script>
+    <!-- Calling the javascript file -->
+</body>
+
+</html>

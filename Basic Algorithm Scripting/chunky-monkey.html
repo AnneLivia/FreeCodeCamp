@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function chunkArrayInGroups(arr, size) {
+            var arrFormed = [];
+            while(arr.length) {
+                arrFormed.push(arr.slice(0,size));
+                arr.splice(0,size);
+            }
+            return arrFormed;
+        }
+        alert(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+    </script>
+</body>
+</html>

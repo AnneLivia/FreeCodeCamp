@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="interface">
+        <form>
+            
+        </form>
+    </div>
+    <script>
+        function isAlpha(letter) {
+            // var code = String.charCodeAt(letter); 
+            if(letter >= 65 && letter <= 90)
+                return true;
+            return false;
+        }
+        function rot13(str) { // LBH QVQ VG!
+            var codASCII, cont, formedStr = "";
+            for(var i = 0; i < str.length; i++) {
+                codASCII = String.charCodeAt(str[i]);
+                if(isAlpha(codASCII)) {
+                    cont = 1;
+                    while(cont <= 13) {
+                        if(codASCII === 90)
+                            codASCII = 64;
+                        codASCII++;
+                        cont++;
+                    }
+                } 
+                formedStr+=String.fromCharCode(codASCII);
+            }
+            return formedStr;
+        }
+        alert(rot13("SERR PBQR PNZC"));
+        alert(rot13("SERR CVMMN!"));
+        alert(rot13("SERR YBIR?"));
+        alert(rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."));
+        alert(rot13("LBH QVQ VG!"));
+    </script>
+</body>
+</html>

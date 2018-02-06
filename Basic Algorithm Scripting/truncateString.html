@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function truncateString(str, num) {
+            // Clear out that junk in your trunk
+            var stGenerated;
+            if(num <= 3) {
+                stGenerated = str.slice(0,num);
+                stGenerated += "...";
+            } else if(num < str.length) {
+                stGenerated = str.slice(0,num - 3);
+                stGenerated += "...";
+            } else {
+                stGenerated = str;
+            }
+            return stGenerated;
+        }
+        truncateString("A-tisket a-tasket A green and yellow basket", 11);
+        truncateString("Peter Piper picked a peck of pickled peppers", 14);
+        truncateString("Peter Piper picked a peck of pickled peppers", 14);
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);
+        truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length + 2);
+        truncateString("A-", 1);
+        truncateString("Absolutely Longer", 2);
+    </script>
+</body>
+</html>

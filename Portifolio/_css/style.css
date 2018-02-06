@@ -1,0 +1,616 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); /*Only the open sans font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display'); /*Open sans with playfair display fonts*/
+/*
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
+*/
+html, body, .container-fluid, .interface{
+    height: 100%;
+    margin: 0;
+}
+.pIntroduction, .pPart1, .pPart2, .pPart3{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pIntroduction {
+    /* Imagem 2.png
+    link: https://static.pexels.com/photos/205316/pexels-photo-205316.png*/
+    background-image: url("../_image/image1.png");
+    margin: 0 -13px 0 -13px;
+    min-height: 100%;
+    opacity: 0.8;
+    background-attachment: scroll; /*Primeira imagem no modo scroll para que a seta não saia sozinha da tela*/
+}
+
+.pPart1, .pPart2, .pPart3 {
+    min-height: 380px;
+    margin: 0px -15px;
+}
+
+.pPart1 {
+    /* image 2.jpeg: https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg*/
+    background-image: url("../_image/image2.jpeg"); 
+}
+
+.pPart2 {
+    /* Image 1: link: https://static.pexels.com/photos/34676/pexels-photo.jpg*/
+    background-image: url("../_image/image3.jpg"); 
+}
+
+.pPart3 {
+    /* Image 4: https://static.pexels.com/photos/597330/pexels-photo-597330.jpeg */
+    background-image: url("../_image/image4.jpeg");
+}
+
+/* Styling about me, portfolio, contact, etc.  */
+.pAbout, .pPortfolio, .pContact, .pEnd {
+  min-height: 100%;
+  padding: 40px 130px;
+  text-align: center;
+}
+
+.pAbout p, .pPortfolio p, .pEnd p, .pContact p {
+    text-align: justify;
+    padding: 10px;
+    margin-top: 28px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pContact p {
+    margin-top: 15px;
+}
+
+.pAbout h1, .pPortfolio h1, .pContact h1, .pEnd h1 {
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Estilizando a borda das parte onde contém os textos */
+.aBorder {
+    padding: 50px;
+}
+
+.pAbout .aBorder, .pContact .aBorder {
+    margin-top: 60px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 50px;
+}
+
+/* Styling the my image */
+
+.perfil {   
+    height: 220px;
+    width: 220px;
+    margin: 30px 0px 40px;
+}
+
+/* Estilizando a imagem de perfil com uma listas
+ Minha foto do perfil utilizando uma lista.
+li#perfil {
+    background-image: url("https://avatars3.githubusercontent.com/u/31932673?s=460&v=4"); -- Foto de perfil tirada da minha conta no github
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    width: 250px;
+    height: 250px;
+    border-radius: 350px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    margin-left: 30px; Levando para o lado
+} */
+
+ul {
+    list-style-type: none;
+    /*overflow: hidden;*/
+}
+
+.pAbout p, .pContact p {
+    margin-left: 50px;
+}
+/* Styling the arrow accounts */
+.arrow {
+    background-image: url("../_image/seta.png"); /* Putting the image from my file, this image is transparent */
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.goto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -110px;
+}
+
+/* Styling menu */
+
+.menu {
+    margin: 20px;
+    padding: 25px;
+}
+
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 4px;
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fixed {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Styling portfolio part of the webpage */
+.pVideo {
+    margin-top: -70px;
+}
+
+/* Styling the images of my projects */
+.pImages {
+    margin-top: -40px;
+}
+
+.portImages {
+    z-index: 1;
+    border: 5px solid white;
+    width: 240px;
+    height: 240px;
+    border-radius: 350px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+    margin-bottom: 70px; /* Estava 45 */
+}
+
+.circleGrow img{
+    transition: 0.5s ease-out;
+}
+
+/* A hover to each image of the portfolio part */
+.circleGrow:hover img{
+    width: 265px;
+    height: 210px;
+    border-radius: 10px;
+    transform: scale(1.5);
+}
+
+/* Stying the form on the .pContact part */
+
+.pContact #idContactForm {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pContact #idContactForm input, #idContactForm textarea {
+    width: 320px;
+    padding: 10px;
+    border: 0.5px groove rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.pContact #idContactForm input:hover, #idContactForm textarea:hover {
+    border: 0.5px groove rgb(14, 144, 230);
+}
+
+.pContact .btSend {
+    width: 100px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Styling the social media on the .pEnd part */
+
+.icon {
+    width: 150px;
+    height: 150px;
+}
+
+.pEnd a {
+    font-family: 'Playfair Display', serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/*This class was done to give an effect of growing of the image when the mouse is over it */
+.grow {
+    transition: 0.5s ease-out;
+}
+
+/*Hover with the class */
+.grow:hover {
+    -webkit-transform: scale(1.3); /* To work on the browser referred to webkit*/
+    -ms-transform: scale(1.3);     /* To work on the browser referred to ms */
+    transform: scale(1.3);
+}
+
+.midias {
+    padding-top: 40px; /* This was done to separate the top of the icons from the header */
+}
+
+footer {
+    margin-top: 170px;
+}
+
+footer p {
+    margin: -40px;
+}
+
+/* Creating classe to do some animations while scrolling */
+/*Animation Css: lightSpeedIn, video*/
+.anime1 {
+    opacity: 0;
+}
+/*Animation Css: rollIn, portfolio's images*/
+.anime2 {
+    opacity: 0;
+}
+
+/*Animation Css: slideInLeft, Perfil photo */
+.anime3 {
+    opacity: 0;
+}
+/*Animation Css: fadeInRight, p tags */
+.anime4 {
+    opacity: 0;
+}
+/*Animation Css: zoomIn, H1's tag */
+.anime5 {
+    opacity: 0;
+}
+
+/*Animation Css: slideInUp, form tag*/
+.anime6 {
+    opacity: 0;
+}
+
+.animated {
+    opacity: 1;
+}
+
+
+@media (max-width: 1300px) {
+    .arrow {
+        background-size: 90px 90px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .pAbout p, .pContact p {
+        margin-left: 80px;
+        margin-top: -20px;
+    }
+
+
+}
+@media (max-width:1114px) {
+
+    .pAbout .aBorder, .pContact .aBorder {
+        margin: 0px auto;
+        width: 750px;
+    }
+
+    .arrow {
+        background-size: 90px 90px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .goto {
+        margin-left: -45px;
+        margin-top: -100px;
+    }
+
+    .pAbout, .pPortfolio, .pContact, .pEnd {
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .pAbout p, .pContact p {
+        margin-left: 80px;
+    }
+
+    .portImages {
+        width: 190px;
+        height: 190px;
+    }
+
+    .circleGrow:hover img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .pContact #idContactForm input, #idContactForm textarea {
+        width: 200px;
+        padding: 10px;
+        margin-left: -1px;
+        margin-top: 20px;
+    }
+
+    video {
+        width: 520px;
+        height: 450px;
+    }
+}
+
+@media (max-width:766px) {
+
+    .pPart1, .pPart2, .pPart3{
+        min-height: 200px;
+    }
+    
+    .pAbout .aBorder, .pContact .aBorder {
+        margin: 0px auto;
+        width: 550px;
+    }
+
+    .arrow {
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+    }
+    .goto {
+        margin-left: -27px;
+        margin-top: -60px;
+    }
+
+    .pAbout, .pPortfolio, .pContact, .pEnd {
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .pAbout p, .pContact p {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    video {
+        display: none;
+    }
+
+    .portImages {
+        border: 1px solid white;
+        width: 220px;
+        height: 220px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+        margin-top: 100px;
+        margin-bottom: -50px; /* Estava 45 */
+    }
+
+    .circleGrow:hover img{
+        border: 5px solid white;
+        width: 220px;
+        height: 220px;
+        transform: none;
+        border-radius: 4px;
+    }
+
+    .pContact #idContactForm input, #idContactForm textarea {
+        width: 410px;
+        padding: 10px;
+        border: 0.5px groove rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .grow:hover {
+        -webkit-transform: none; /* To work on the browser referred to webkit*/
+        -ms-transform: none;     /* To work on the browser referred to ms */
+        transform: none;
+    }
+
+    .icon {
+        width: 99px;
+        height: 99px;
+    }
+
+    footer p {
+        margin: 1px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .nav {
+        position: unset;
+    }
+
+    .pPart1, .pPart2, .pPart3{
+        min-height: 200px;
+    }
+    
+    .pAbout .aBorder, .pContact .aBorder {
+        margin: 0px auto;
+        width: 350px;
+    }
+
+    .arrow {
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .goto {
+        margin-left: -26px;
+        margin-top: -60px;
+    }
+
+    .pAbout, .pPortfolio, .pContact, .pEnd {
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    }
+
+    .pAbout p, .pContact p {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    video {
+        display: none;
+    }
+
+    .portImages {
+        border: 1px solid white;
+        width: 190px;
+        height: 190px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+        margin-top: 100px;
+        margin-bottom: -50px; /* Estava 45 */
+    }
+
+    .circleGrow:hover img{
+        border: 5px solid white;
+        width: 190px;
+        height: 190px;
+        transform: none;
+        border-radius: 4px;
+    }
+
+    .pContact #idContactForm input, #idContactForm textarea {
+        width: 210px;
+        padding: 10px;
+        border: 0.5px groove rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+
+    .grow:hover {
+        -webkit-transform: none; /* To work on the browser referred to webkit*/
+        -ms-transform: none;     /* To work on the browser referred to ms */
+        transform: none;
+    }
+
+    .icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer p {
+        margin: 1px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 364px) {
+
+    .nav {
+        position: unset;
+    }
+
+    .pIntroduction, .pPart1, .pPart2, .pPart3{
+        background-attachment: scroll;
+    }
+
+    .pPart1, .pPart2, .pPart3{
+        min-height: 200px;
+    }
+
+    .pAbout, .pPortfolio, .pContact, .pEnd {
+        padding: 10px 20px 10px 20px;
+        text-align: center;
+    }
+
+    .arrow {
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .goto {
+        margin-left: -26px;
+        margin-top: -60px;
+    }
+
+    .pAbout h1, .pPortfolio h1, .pContact h1, .pEnd h1 {
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+
+    .pAbout p, .pPortfolio p, .pEnd p, .pContact p {
+        font-size: 15px;
+    }
+
+    .pAbout .aBorder, .pContact .aBorder {
+        margin: 0px auto;
+        width: 250px;
+    }
+
+    .pAbout p, .pContact p {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .perfil {   
+        height: 110px;
+        width: 110px;
+        margin: 30px 0px 40px;
+    }
+
+    .menu ul li {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+        margin: 4px;
+        display: inline;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    video {
+        display: none;
+    }
+
+    .portImages {
+        border: 1px solid white;
+        width: 150px;
+        height: 150px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6);
+        margin-top: 100px;
+        margin-bottom: -50px; /* Estava 45 */
+    }
+
+    .circleGrow:hover img{
+        border: 5px solid white;
+        width: 150px;
+        height: 150px;
+        transform: none;
+        border-radius: 4px;
+    }
+
+    .pContact #idContactForm input, #idContactForm textarea {
+        width: 150px;
+        padding: 10px;
+        border: 0.5px groove rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+    }
+    
+    /*Hover with the class */
+    .grow:hover {
+        -webkit-transform: none; /* To work on the browser referred to webkit*/
+        -ms-transform: none;     /* To work on the browser referred to ms */
+        transform: none;
+    }
+
+    .icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    footer p {
+        margin: 1px;
+        font-size: 15px;
+    }
+}

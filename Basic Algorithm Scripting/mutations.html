@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mutation(arr) {
+           var cont = 0;
+           arr[0] = arr[0].toUpperCase();
+           arr[1] = arr[1].toUpperCase();
+           for(var i = 0; i < arr[1].length; i++) {
+                if(arr[0].indexOf(arr[1][i]) !== -1) {
+                    cont++;
+                }
+            }
+            if(cont == arr[1].length)
+                return true;
+            return false;
+        }
+    
+        alert(mutation(["hi", "thnli"]));
+        alert(mutation(["hello", "Hello"]));
+        alert(mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]));
+        alert(mutation(["Mary", "Army"]));
+        alert(mutation(["Mary", "Aarmy"]));
+        alert(mutation(["Alien", "line"]));
+        alert(mutation(["floor", "for"]));
+        alert(mutation(["hello", "neo"]));
+        alert(mutation(["voodoo", "no"]));
+        
+    </script>
+</body>
+</html>

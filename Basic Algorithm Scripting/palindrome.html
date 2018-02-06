@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindrome(str) {
+            str = str.split(' ');
+            str = str.join('');
+            str = str.toLowerCase();
+            str = str.replace(/[^a-z0-9+]+/gi,'');
+            newStr = str.split('');
+            newStr = newStr.reverse();
+            newStr = newStr.join('');
+           
+            if(newStr === str) 
+                return true;
+            else
+                return false;
+        }
+
+        alert(palindrome("_eye"));
+    </script>
+</body>
+</html>
