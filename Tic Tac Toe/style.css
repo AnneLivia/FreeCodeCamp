@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+/* font-family: 'Poiret One', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Economica|Poiret+One');
+/* font-family: 'Economica', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Economica|Poiret+One');
+/* font-family: 'Cabin Sketch', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch|Chewy|Economica|Poiret+One');
+/* font-family: 'Chewy', cursive; */
+@import url('https://fonts.googleapis.com/css?family=Electrolize');
+/* font-family: 'Electrolize', sans-serif;*/
+
+body{
+    background: url("background.png");
+    background-size: cover;
+}
+div#main{
+    margin: auto;
+    width: 530px;
+    height: 500px;
+    box-shadow: 1px 9px 10px rgba(0,0,0,0.6);
+    background: url("background.png") no-repeat;
+}
+
+div#main ul{
+    list-style-type: none;
+}
+
+div#main li{
+    position: relative;
+    right: 21px;
+    float: right;
+    margin: 10px;
+    border: 1px solid hsla(178, 75%, 59%, 0.92);
+    width: 140px;
+    height: 140px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease-in;
+}
+
+p{
+    font-family: 'Chewy', cursive;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 80pt;
+    color: blue;
+}
+
+ul#game li:hover{
+    background-color: hsla(205, 100%, 58%, 0.59);
+    transform: scale(1.2);
+    cursor: pointer;
+}

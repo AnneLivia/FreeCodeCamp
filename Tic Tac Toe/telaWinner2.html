@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Tic Tac Toe </title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="javascript.js"></script>
+        <style>
+            h1{
+                font-size: 50pt;
+                text-align: center;
+                position: relative;
+                top: 50px;
+                font-family: 'Cabin Sketch', cursive;
+                color: hsla(345, 73%, 52%, 0.87);
+                text-shadow: 4px 4px 1px hsla(350, 73%, 52%, 0.57);
+            }
+
+            h1 span#color1{
+                color: hsla(48, 89%, 52%, 0.87);
+                text-shadow: 4px 4px 1px hsla(56, 73%, 52%, 0.57);
+            }
+            h1 span#color2{
+                color: hsla(105, 89%, 52%, 0.87);
+                text-shadow: 4px 4px 1px hsla(113, 73%, 52%, 0.57);
+            }
+            h2{
+                border: 1px solid white;
+                border-radius: 100%;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+                width: 260px;
+                height: 120px;
+                position: relative;
+                top: 20px;
+                left: 144px;
+                padding-top: 80px;
+                padding-bottom: 40px;
+                text-align: center;
+                font-family: 'Electrolize', sans-serif;
+                font-size: 30pt;
+                color: hsla(325, 97%, 55%, 0.86);
+                text-shadow: 1px 1px 0px black;
+            }
+            button#botao{
+                position: relative;
+                top: 18px;
+                left: 194px;
+                padding: 10px 40px 10px 40px;
+                box-shadow: 1px 1px 4px hsla(211, 73%, 52%, 0.33);
+                font-family: 'Poiret One', cursive;
+                font-size: 20pt;
+                color: rgba(0,0,225,0.7);
+                font-weight: bolder;
+                border-radius: 20px;
+                transition: background-color  1s;
+            }
+            button#botao:hover{
+                background-color: rgba(0,0,225,0.7);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1><span id="color1">TIC</span> TAC <span id="color2">TOE</span></h1>
+            <h2 id="vencedor"> Jogador 2 é o vencedor </h2>
+            <button type="button" id="botao" onclick="mudarDePagina('2');"> Voltar </button>
+        </div>
+    </body>
+</html>

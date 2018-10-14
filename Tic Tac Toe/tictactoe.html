@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Tic Tac Toe </title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="javascript.js"></script>
+    </head>
+    <body onload="startGame('x','o');">
+        <div id="main" class="posicao">
+            <ul id="game">
+                <li onclick="nextMove('square1');"><p id="square1"></p></li>
+                <li onclick="nextMove('square2');"><p id="square2"></p></li>
+                <li onclick="nextMove('square3');"><p id="square3"></p></li>
+                <li onclick="nextMove('square4');"><p id="square4"></p></li>
+                <li onclick="nextMove('square5');"><p id="square5"></p></li>
+                <li onclick="nextMove('square6');"><p id="square6"></p></li>
+                <li onclick="nextMove('square7');"><p id="square7"></p></li>
+                <li onclick="nextMove('square8');"><p id="square8"></p></li>
+                <li onclick="nextMove('square9');"><p id="square9"></p></li>
+            </ul>
+        </div>
+    </body>
+</html>

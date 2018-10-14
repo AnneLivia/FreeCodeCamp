@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="_css/bootstrap.min.css">
+    <link rel="stylesheet" href="_css/animate.min.css" />
+    <link rel="stylesheet" href="_css/estilo.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>Local Weather</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="interface">
+            <div class="content text-center">
+                <h2 class="weatherTittle animated zoomIn">Local Weather</h2>
+                <p><span class="cityName"></span>
+                <span class="countryName"></span></p>
+                <span class="animated pulse degree"></span>
+                <!-- Switcher from C to F -->
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <div class="weatherIcons">
+                    <span class="day weather"></span>
+                    <span class="night weather"></span>
+                    <span class="cloudyDay weather"></span>
+                    <span class="cloudyNight weather"></span>
+                    <span class="rainyDay weather"></span>
+                    <span class="rainyNight weather"></span>
+                    <span class="drizzleDay weather"></span>
+                    <span class="drizzleNight weather"></span>
+                    <span class="snowyDay weather"></span>
+                    <span class="snowyNight weather"></span>
+                    <span class="thunder weather"></span>
+                </div>
+                <p class="description"></p>
+                <footer>                
+                    <p class="text-center">Developed by <a href="https://www.freecodecamp.org/annelivia" target="_blank">Anne Livia</a> © <a href="https://www.amcharts.com/free-animated-svg-weather-icons/" target="_blank">amCharts</a> Icons 2018. All Rights Reserved </p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="_javascript/javascript.js"></script>
+</body>
+
+</html>

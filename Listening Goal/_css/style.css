@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Abel|Alegreya+Sans|Quicksand');
+
+
+/*
+   font-family: 'Quicksand', sans-serif;
+   font-family: 'Abel', sans-serif;
+   font-family: 'Alegreya Sans', sans-serif;
+
+*/
+
+body {
+    background-color: rgb(162, 66, 252);
+}
+
+.content {
+    position: absolute;
+    top: 49%;
+    left: 49%;
+    width: 28em;
+    height: 20em;
+    margin-left: -15%;
+    margin-top: -14%; 
+    z-index: 100;
+    background-color: white;
+    /* margin: 12% 30%; */
+    box-shadow: 1px 2px 3px black;
+    font-family: 'Quicksand', sans-serif;
+    background-color: blueviolet;
+}
+
+/* Styling the start page */
+
+.startPage {
+    padding-bottom: 12%;
+}
+
+/* Styling the h1 of the start page */
+.startPage h1, .processPage h1 {
+    font-family: 'Abel', sans-serif;
+    padding-top: 15px;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+/* Styling the form of the start page */
+
+.startPage form {
+    margin: 0 30%;
+}
+
+/* Styling the inout of the start page */
+
+.startPage form input{
+    margin: 1px;
+    padding: 5%;
+    border: 4px solid rgba(91, 3, 99, 0.904);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.startPage form input:focus{
+    border: 4px solid rgba(20, 20, 20, 0.904);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(124, 0, 76, 0.6);
+}
+
+
+/* Styling the button of the start page */
+
+.startPage form button {
+    background-color: rgb(231, 27, 214);
+    border: 2px solid black;
+    font-weight: bolder;
+    margin: 30px 15% -20px 15%;
+    padding: 5% 20%; 
+    color: white;
+}
+
+.startPage form button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bolder;
+}
+
+/* =================================================================================================================== */
+
+/* Styling the processPage */
+
+.processPage {
+    padding-bottom: 10%;
+}
+
+.time {
+    margin: -10px 20%;
+    padding: 10px;
+    background-color: rgba(255, 58, 206, 0.459);
+    border: 2px solid rgb(255, 255, 255); 
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    cursor: default;
+}
+
+/* Styling the time that must be reached */
+
+.timeToReach {
+    margin: 15px 20% -10px;
+    font-weight: bold;
+    font-size: 13pt;
+    color: rgb(255, 140, 148);
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.processPage form {
+    margin: 50px 30% 0;
+}
+
+.processPage form input {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.processPage form .add, .btReturn, .btReset {
+    background-color: rgb(231, 27, 214);
+    font-weight: bolder;
+    color: white;
+}
+
+.processPage form .add:hover {
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid black;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+/* styling the return and zerar button */
+
+.btReturn, .btReset {
+    position: relative;
+    font-size: 13px; 
+}
+
+.btReturn {
+    left: 60%;
+    float: right; 
+}
+
+.processPage form .btReturn:hover, .btReset:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bolder;
+}
+
+.btReset {
+    left: -60%;
+    float: left; 
+}
+
+/* =================================================================================================================== */
+
+
+/* Styling footer */
+
+footer p {
+    /* margin: 35% -8% 0; */
+    position: absolute;
+    margin: 28em 6em 2em; 
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+/* =================================================================================================================== */
+
+/* Styling progress bar */
+#progressBar {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.253);
+}
+
+#bar {
+    width: 0%;
+    height: 12px;
+    background-color: #d549ff;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 15px; /* To center it vertically */
+    color: white; 
+}
+
+/* =================================================================================================================== */
+
+/* Styling the dialog jquery */
+
+#dialog {
+    font-family: 'Abel', sans-serif;
+    display: none;
+}
+
+.ui-dialog .ui-dialog-titlebar { 
+    font-family: 'Abel', sans-serif;
+    border: 1px solid #ffffff; 
+    background: rgb(231, 27, 214);
+    color: white;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    background: rgb(231, 27, 214);
+    color: white;
+}
+
+.ui-widget button {
+    color: rgb(0, 0, 0);
+}
+
+.ui-button, .ui-button-text .ui-button{  
+    font-size: 14px !important; 
+    color: rgb(0, 0, 0);
+}
+
+
+/* =================================================================================================================== */
+
+/* Styling tooltip */
+
+.ui-tooltip {
+    padding: 10px 6px;
+    border-radius: 20px;
+    font: lighter 'Abel', sans-serif;
+    font-size: 11pt;
+    width: 242px;
+}
+
+/* =================================================================================================================== */
+
+/* Make one of them invisible so that the jquery part can work properly */
+
+.startPage {
+    display: block;
+}
+
+.processPage {
+    display: none;
+}
+
+/* =================================================================================================================== */
+
+/* Media queries style */
+
+@media (max-width: 1504px) {
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 1188px) {
+    .content {
+        margin-left: -17%;
+        margin-top: -16%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 1108px) {
+    .content {
+        margin-left: -20%;
+        margin-top: -20%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 1030px) {
+    .content {
+        margin-left: -22%;
+        margin-top: -20%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+}  
+
+
+@media (max-width: 903px) {
+    .content {
+        margin-left: -23%;
+        margin-top: -24%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+}  
+
+
+@media (max-width: 878px) {
+    .content {
+        margin-left: -25%;
+        margin-top: -24%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+}  
+
+@media (max-width: 788px) {
+    .content {
+        margin-left: -28%;
+        margin-top: -26%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 734px) {
+    .content {
+        margin-left: -30%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 714px) {
+    .content {
+        margin-left: -30%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+@media (max-width: 677px) {
+    .content {
+        margin-left: -32%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 25em 6em 2em; 
+    }
+} 
+
+
+@media (max-width: 635px) {
+    .content {
+        margin-left: -35%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+@media (max-width: 558px) {
+    .content {
+        margin-left: -39%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+@media (max-width: 527px) {
+    .content {
+        margin-left: -42%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+
+@media (max-width: 496px) {
+    .content {
+        margin-left: -45%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+@media (max-width: 490px) {
+    .content {
+        margin-left: -45%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+@media (max-width: 468px) {
+    .content {
+        margin-left: -47%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+@media (max-width: 458px) {
+    .content {
+        margin-left: -48%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+}
+
+@media (max-width: 410px) {
+    .content {
+        margin-left: -50%;
+        margin-top: -30%;
+    }
+
+    footer p {
+        margin: 23em 6em 2em; 
+    }
+} 
+
+
+ 
+ 
+ 

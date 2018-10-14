@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Mina');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/*
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Mina', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+*/
+
+body, html, .container-fluid,.interface {
+    margin: 0;
+}
+
+/* Styling main screen */
+
+body {
+    background-color: rgba(5, 0, 49, 0.767);
+}
+
+
+/* Styling the place where the weather is going to be placed */
+
+.content {
+    position: absolute;
+    top: 19%;
+    left: 23%;
+    z-index: 100;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.329);
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.205);
+    width: 49em;
+    height: 26em;
+}
+
+.weatherTittle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    color: white;
+}
+
+.cityName, .degree, .countryName, .description {
+    font-size: 40px;
+    font-family: 'Mina', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 38%;
+}
+
+.countryName {
+   font-size: 38px;
+   margin-left: 1%;
+}
+
+.description {
+    margin-left: 32%;
+    margin-top: -18%;
+}
+
+/* ================================================================================================================ */
+
+
+/* Styling the weather icons */ 
+
+.weather { 
+    display: none;
+    width: 400px;
+    height: 382px;
+    background-size: 400px 382px;
+    margin-top: -30%;
+    margin-left: 4%;
+}
+
+/* ================================================================================================================
+---> Those svg icons were taken from https://www.amcharts.com/free-animated-svg-weather-icons/
+=================================================================================================================== 
+*/
+
+/* clear day and night */
+.weatherIcons .day {
+    background-image: url("../_icons/animated/day.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .night {
+    background-image: url("../_icons/animated/night.svg");
+    background-repeat: no-repeat;   
+}
+
+/* cloudy day and night */
+.weatherIcons .cloudyDay {
+    background-image: url("../_icons/animated/cloudy-day-1.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .cloudyNight {
+    background-image: url("../_icons/animated/cloudy-night-1.svg");
+    background-repeat: no-repeat;   
+}
+
+/* Rainy day and night */
+.weatherIcons .rainyDay {
+    background-image: url("../_icons/animated/rainy-1.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .rainyNight {
+    background-image: url("../_icons/animated/rainy-6.svg");
+    background-repeat: no-repeat;   
+}
+
+/* Snowy day and night */
+.weatherIcons .snowyDay {
+    background-image: url("../_icons/animated/snowy-3.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .snowyNight {
+    background-image: url("../_icons/animated/snowy-6.svg");
+    background-repeat: no-repeat;   
+}
+
+/*Drizzle day and night */
+.weatherIcons .drizzleDay {
+    background-image: url("../_icons/animated/rainy-2.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .drizzleNight {
+    background-image: url("../_icons/animated/rainy-4.svg");
+    background-repeat: no-repeat;   
+}
+
+.weatherIcons .thunder {
+    background-image: url("../_icons/animated/thunder.svg");
+    background-repeat: no-repeat;   
+}
+
+/* ================================================================================================================ */
+
+/* Styling the switcher that switches from C to F */
+
+.switch {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-top: 1%;
+    position: absolute;
+    display: none;
+    width: 60px;
+    height: 34px;
+}
+  
+  /* Hide default HTML checkbox */
+  .switch input {display:none;}
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "C";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content: "F";
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  /* ================================================================================================================ */
+
+/* Styling footer */
+
+footer p {
+    display: none;
+    position: absolute;
+    top: 92%;
+    left: 26%;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+}
+
+footer p a {
+    color: inherit;
+}
+
+footer p a:hover {
+    color: inherit;
+}
+
+/* =============================================================================================================== */
+
+/* Medias queries */
+
+@media (max-width: 1240px) {
+    .content {
+        top: 16%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        top: 16%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 1120px) {
+    .content {
+        top: 16%;
+        left: 16%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .content {
+        top: 16%;
+        left: 14%;
+    }
+}
+
+
+@media (max-width: 1010px) {
+    .content {
+        top: 16%;
+        left: 12%;
+    }
+}
+
+@media (max-width: 978px) {
+    .content {
+        top: 16%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 910px) {
+    .content {
+        top: 16%;
+        left: 7%;
+    }
+}
+
+@media (max-width: 874px) {
+    .content {
+        left: 5%;
+    }
+}
+
+@media (max-width: 826px) {
+    .content {
+        top: 1%;
+        left: 4%;
+        width: 48em;
+        height: 99%;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       margin-left: 38%;
+    }
+    
+    .countryName {
+        margin-left: 1%;
+     }
+     
+     .description {
+         margin-top: -18%;
+     }
+
+    .weather { 
+        margin-left: 1%;
+    }
+
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 766px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 3%;
+        width: 45em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 54px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 32px;
+       margin-left: 38%;
+    }
+    
+    .countryName {
+        font-size: 38px;
+        margin-left: 1%;
+     }
+     
+     .description {
+         margin-left: 32%;
+         margin-top: -18%;
+     }
+
+     .weather { 
+        margin-left: 1%;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 728px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 3%;
+        width: 43em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 54px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 32px;
+       margin-left: 38%;
+    }
+    
+    .countryName {
+        font-size: 38px;
+        margin-left: 1%;
+     }
+     
+     .description {
+         margin-left: 32%;
+         margin-top: -18%;
+     }
+
+     .weather { 
+        margin-left: 1%;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 690px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 4%;
+        width: 40em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 54px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 32px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 385px;
+        height: 377px;
+        background-size: 385px 377px;
+        margin-top: -70px;
+        margin-left: 100px;
+        margin-bottom: 10px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 616px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 2%;
+        width: 37em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 54px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 32px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 385px;
+        height: 377px;
+        background-size: 385px 377px;
+        margin-top: -60px;
+        margin-left: 60px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 566px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 3%;
+        width: 33em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 52px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 30px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 380px;
+        height: 372px;
+        background-size: 380px 372px;
+        margin-top: -55px;
+        margin-left: 40px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 520px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 4%;
+        width: 30em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 50px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 28px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 370px;
+        height: 362px;
+        background-size: 370px 362px;
+        margin-top: -55px;
+        margin-left: 10px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+/* Medias queries */
+@media (max-width: 476px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 3%;
+        width: 28em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 48px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 28px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 360px;
+        height: 352px;
+        background-size: 360px 352px;
+        margin-top: -55px;
+        margin-left: 15px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: 3%;
+    }
+}
+
+@media (max-width: 434px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 4%;
+        width: 25em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 46px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 26px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 340px;
+        height: 332px;
+        background-size: 340px 332px;
+        margin-top: -45px;
+        margin-left: 12px;
+    }
+
+    .switch {
+        width: 54px;
+        height: 28px;
+    }
+
+    .slider:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: 3%;
+    }
+}
+
+@media (max-width: 400px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 4%;
+        width: 23em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 44px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 24px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 320px;
+        height: 312px;
+        background-size: 320px 312px;
+        margin-top: -20px;
+        margin-left: 12px;
+    }
+
+    .switch {
+        width: 52px;
+        height: 26px;
+    }
+
+    .slider:before {
+        height: 18px;
+        width: 18px;
+        font-size: 12px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: 3%;
+    }
+}
+
+@media (max-width: 368px) {
+    .content {
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        top: 1%;
+        left: 2%;
+        width: 22em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 42px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 22px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 300px;
+        height: 282px;
+        background-size: 300px 282px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .switch {
+        width: 50px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        font-size: 11px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 340px) {
+    .content {
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0);
+        top: 1%;
+        left: 3%;
+        width: 20em;
+        height: 99%;
+    }
+
+    .weatherTittle {
+        font-size: 40px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 20px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 300px;
+        height: 282px;
+        background-size: 300px 282px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .switch {
+        width: 50px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        font-size: 11px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: 1%;
+    }
+}
+
+@media (max-width: 320px) {
+    .content {
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .weatherTittle {
+        font-size: 40px;
+        margin-bottom: 5%;
+    }
+
+    .cityName, .degree, .countryName, .description {
+       font-size: 20px;
+       margin-left: 0;
+    }
+
+    .weather {
+        width: 300px;
+        height: 282px;
+        background-size: 300px 282px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .switch {
+        width: 50px;
+        height: 24px;
+    }
+
+    .slider:before {
+        height: 16px;
+        width: 16px;
+        font-size: 11px;
+    }
+
+    footer p {
+        position: relative;
+        font-size: 14px;
+        top: 92%;
+        left: -1%;
+    }
+}
